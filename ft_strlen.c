@@ -10,19 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *c)
+#include <stdio.h>
+#include "libft.h"
+
+size_t ft_strlen(const char *s)
 {
 	int	i;
-	int	counter;
 
-	counter = 0;
 	i = 0;
-	if (!c)
+	if (!s)
 		return (0);
-	while (c[i] != '\0')
+	while (s[i] != '\0')
 	{
-		counter++;
 		i++;
 	}
-	return (counter);
+	return (i);
 }
+/*
+int main()
+{
+	char	str[] = "ciao";
+
+	printf("len: %d\n", ft_strlen(str));
+}
+
+*/

@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//header 42
-//lib
-
 /*
 The strlcpy() and strlcat() functions copy and concatenate strings with
 the same input parameters and output result as snprintf(3).  They are
@@ -28,28 +25,36 @@ for the easily misused functions strncpy(3) and strncat(3).
 */
 
 #include <stdio.h>
+#include <string.h>
+#include "libft.h"
 
-size_t	ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	int	i;
+	int len;
 
-	if (!dst || !src)
+	if (!dst || !src)	/*extreme case handling*/
 		return (0);
+	len = ft_strlen(src);
 	i = 0;
-	while (dst[i] != '\0' && i != dstsize)
+	while (dst[i] != '\0' && i != size - 1)
 	{
 		dst[i] = src[i];
 		i++;
 	}
+
 	dst[i] = '\0';
-	return (i);
+	return (len);
 }
 
 int	main(void)
 {
-	char str[] = "ciao";
-	char dst_str[8];
+	char	str[] = "ciao";
+	char	dst_str[8];
+
 	printf("before: %s\n", dst_str);
-	ft_strlcpy(dst_str, str, 1);
+	printf("%zu\n", ft_strlcpy(dst_str, str, 5));
+	//printf("%d\n", strlcpy(dst_str, str, 5));
 	printf("after: %s\n", dst_str);
 }
+/*non finito*/
