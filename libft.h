@@ -24,7 +24,7 @@ int		ft_isprint(int c);
 int		ft_isascii(int c);
 int		ft_isalnum(int c);
 
-size_t ft_strlen(const char *s);
+size_t	ft_strlen(const char *s);
 
 /*memory handling*/
 void	ft_bzero(void *s, size_t n);

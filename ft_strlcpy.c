@@ -30,33 +30,41 @@ for the easily misused functions strncpy(3) and strncat(3).
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	int	i;
-	int len;
+	size_t	i;
+	size_t	len;
 
-	if (!dst || !src)	/*extreme case handling*/
-		return (0);
-	len = ft_strlen(src);
+	if (size == 0)
+		return (len);
 	i = 0;
-	//dst[i] != '\0' && 
-	while (i != size - 1)
+	while (src[i] != '\0' && i != size - 1)
 	{
 		dst[i] = src[i];
 		i++;
 	}
-
 	dst[i] = '\0';
 	return (len);
 }
-
+/*
 int	main(void)
 {
 	char	str[] = "ciao";
-	char	dst_str[8];
+	char	dst_str[9];
 
-	ft_bzero(dst_str, 8);
+	//ft_bzero(dst_str, 8);
 	printf("before: %s\n", dst_str);
-	printf("%zu\n", ft_strlcpy(dst_str, str, 5));
+	printf("%zu\n", ft_strlcpy(dst_str, str, 0));
 	//printf("%d\n", strlcpy(dst_str, str, 5));
 	printf("after: %s\n", dst_str);
 }
-/*non finito*/
+
+	//stability after moulinette
+	if (!dst || !src)
+		{
+		if (src)
+			return (ft_strlen(src));
+		else
+			return (0);
+		}
+
+
+*/
