@@ -37,7 +37,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		return (0);
 	len = ft_strlen(src);
 	i = 0;
-	while (dst[i] != '\0' && i != size - 1)
+	//dst[i] != '\0' && 
+	while (i != size - 1)
 	{
 		dst[i] = src[i];
 		i++;
@@ -52,6 +53,7 @@ int	main(void)
 	char	str[] = "ciao";
 	char	dst_str[8];
 
+	ft_bzero(dst_str, 8);
 	printf("before: %s\n", dst_str);
 	printf("%zu\n", ft_strlcpy(dst_str, str, 5));
 	//printf("%d\n", strlcpy(dst_str, str, 5));
