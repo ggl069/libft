@@ -56,7 +56,7 @@ int	main(void)
 	//printf("%d\n", strlcpy(dst_str, str, 5));
 	printf("after: %s\n", dst_str);
 }
-
+/*
 	//stability after moulinette
 	if (!dst || !src)
 		{
@@ -65,6 +65,4 @@ int	main(void)
 		else
 			return (0);
 		}
-
-
 */
