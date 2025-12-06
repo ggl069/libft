@@ -13,25 +13,35 @@
 #include <stdio.h>
 #include "libft.h"
 
-int ft_toupper(int c)
+static int	ft_islower(int c)
 {
-    unsigned char   letter;
-
-    letter = (unsigned char)c;
-    if (!ft_islower(letter))//!c || (c < 97 && c > 122)
-        return (letter);
-    letter = c - 32;
-    return (letter);
+	if (c >= 'a' && c <= 'z')
+	{
+		return (1);
+	}
+	else
+		return (0);
 }
 
+int	ft_toupper(int c)
+{
+	unsigned char	letter;
+
+	letter = (unsigned char)c;
+	if (!ft_islower(letter))
+		return (letter);
+	letter = c - 32;
+	return (letter);
+}
+/*
 int main(void)
 {
-    char letter = 'b';
+
+    char letter = 'S';
     
     printf("Lowercase: %c\n", letter);
     letter = ft_toupper(letter);
     printf("Uppercase: %c\n", letter);
     return (0);
 }
-
-correggere condizioni
+*/
