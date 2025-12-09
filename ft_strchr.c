@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ggaetani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/09 16:31:32 by ggaetani          #+#    #+#             */
+/*   Updated: 2025/12/09 16:31:34 by ggaetani         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 //Header 42
 
 /*
@@ -26,23 +38,25 @@ does not appear in the string.
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	*letter;
+	const char	*str;
+	int			i;
 
-	letter = (char *)c;
-	while (s)
+	i = 0;
+	str = (char *)s;
+	while (s[i] != '\0' || s[i] == '\0')
 	{
-		if (s == letter)
-
-			return (s);
-		s++;
+		if (str[i] == c)
+			return ((char *)&str[i]);
+		i++;
 	}
 	return (NULL);
 }
-
+/*
 int	main(void)
 {
-	char str[] = "ciao";
+	char str[] = "\0ciao";
 	char chr = 'a';
 
-	printf("ptr: %p", ft_strchr(str, chr));
+	printf("ptr: %p\n", ft_strchr(str, chr));
 }
+*/
