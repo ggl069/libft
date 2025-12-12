@@ -37,14 +37,14 @@ RETURN VALUE
        character is not found.
 */
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	const char	*str;
 	int			i;
 
 	i = ft_strlen(s);
 	str = (char *)s;
-	while (s[i] != '\0' || s[i] == '\0')
+	while (i >= 0)
 	{
 		if (str[i] == c)
 			return ((char *)&str[i]);
@@ -52,11 +52,12 @@ char *ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
+/*
 int	main(void)
 {
-	char str[] = "\0ciao";
+	char str[] = "cio";
 	char chr = 'a';
 
 	printf("ptr: %p\n", ft_strrchr(str, chr));
 }
+*/
