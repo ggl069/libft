@@ -1,4 +1,4 @@
-rm a.out
 clear
-cc ft_strncmp.c ft_strlen.c -Wall -Wextra -Werror
+cc ft_strnstr.c -Wall -Wextra -Werror
 ./a.out
+rm a.out
