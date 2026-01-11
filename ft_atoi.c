@@ -4,7 +4,8 @@
 DESCRIPTION
 	The atoi function converts the initial portion of the string to an integer.
 	It skips leading white-space characters and then processes an optional sign.
-	It converts the following digits into a numerical value until it reaches a non-digit character.
+	It converts the following digits into a numerical value 
+	until it reaches a non-digit character.
 RETURN VALUE
 	This function returns an integral number,
 	represents int value.
@@ -15,7 +16,7 @@ RETURN VALUE
 
 int	ft_atoi(const char *str)
 {
-	int i;
+	int	i;
 	int	num;
 	int	sign;
 
