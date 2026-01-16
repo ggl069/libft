@@ -31,9 +31,11 @@ char	*ft_strnew(size_t size)
 	return (arr);
 }
 
+/*
 int main(void)
 {
 	char *ex = ft_strnew(44); //0x0000000141904180 ""  -> 0x0000000141904180 ""
 	printf("ex: %s\n", ex);
 	return (0);
 }
+*/
