@@ -73,4 +73,13 @@ void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
+int		ft_strcmp(const char *s1, const char *s2);
+char	*ft_strcpy(char *dst, const char *src);
+char	*ft_strncpy(char *dst, const char *src, size_t len);
+char	*ft_strcat(char *s1, const char *s2);
+char	*ft_strncat(char *s1, const char *s2, size_t n);
+char	*ft_strstr(const char *haystack, const char *needle);
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
+char	*ft_itoa(int n);
+
 #endif
