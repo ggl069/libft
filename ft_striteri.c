@@ -28,18 +28,18 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
 
-	if (!s || !f)
-		return;
-	i = 0;
-	while (s[i] != '\0')
+	if (s && f)
 	{
-		f(i, (char *)&s[i]);
-		i++;
+		i = 0;
+		while (s[i] != '\0')
+		{
+			f(i, (char *)&s[i]);
+			i++;
+		}
 	}
 }
-
 /*
-void    test(unsigned int i, char *c)
+void	test(unsigned int i, char *c)
 {
 	if (i % 2 == 0)
 	{
@@ -55,7 +55,7 @@ void    test(unsigned int i, char *c)
 
 int main(void)
 {
-	char str[] = "Hello World";
+	char str[] = "jkjjjjjjjjjjjj";
 
 	printf("Prima: %s\n", str);
 

@@ -26,48 +26,32 @@ Param. #1       The string to be trimed.
 Return value    The “fresh” trimmed string or a copy of s.
 */
 
-int	skip(char c)
+static int	skip(char c)
 {
-	if (c == ' ' || c == '\n' || c == '\t')
-	{
-		return (1);
-	}
-	return (0);
+	return (c == ' ' || c == '\n' || c == '\t');
 }
 
 char	*ft_strtrim(char const *s)
 {
 	size_t	i;
-	size_t	j;
 	size_t	len;
 	char	*str;
+	size_t	j;
 
-	j = 0;
-	i = 0;
-	len = ft_strlen(s);
 	if (!s)
 		return (NULL);
-	while (skip(s[i]))
+	i = 0;
+	while (s[i] && skip(s[i]))
 		i++;
-	if (s[i] == '\0')
-	{
-		str = malloc(sizeof(char) * 1);
-		if (!str)
-			return (NULL);
-		str[0] = '\0';
-		return (str);
-	}
-	while (skip(s[len - 1]))
+	len = ft_strlen(s);
+	while (len > i && skip(s[len - 1]))
 		len--;
-	str = malloc(sizeof(char) * (len - i + 1));
+	str = (char *)malloc(sizeof(char) * (len - i + 1));
 	if (!str)
 		return (NULL);
+	j = 0;
 	while (i < len)
-	{
-		str[j] = s[i];
-		i++;
-		j++;
-	}
+		str[j++] = s[i++];
 	str[j] = '\0';
 	return (str);
 }

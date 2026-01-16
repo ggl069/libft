@@ -25,16 +25,18 @@ Param. #2		The second string to be compared.
 Return value	1 or 0 according to if the 2 strings are identical or not.
 */
 
-int	t_strequ(char const *s1, char const *s2)
+int	ft_strequ(char const *s1, char const *s2)
 {
 	size_t	i;
 
 	i = 0;
 	if (!s1 || !s2)
+	{
 		if (!s1 && !s2)
 			return (1);
 		else
 			return (0);
+	}
 	while ((s1[i] == s2[i]) && s1[i] != '\0')
 	{
 		i++;

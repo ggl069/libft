@@ -29,16 +29,16 @@ void	ft_striter(char *s, void (*f)(char *))
 {
 	size_t	i;
 
-	if (!s || !f)
-		return;
-	i = 0;
-	while (s[i] != '\0')
+	if (s && f)
 	{
-		f(&s[i]);
-		i++;
+		i = 0;
+		while (s[i] != '\0')
+		{
+			f(&s[i]);
+			i++;
+		}
 	}
 }
-
 /*
 // test function
 void    to_uppercase(char *c)
@@ -54,6 +54,6 @@ int	main(void)
 	//printf("str: %s\n", str);
 	ft_striter(str, to_uppercase);
 
-	printf("str %s", str);
+	printf("str: %s\n", str);
 }
 */
