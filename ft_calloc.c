@@ -1,4 +1,14 @@
-// 42 header
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ggaetani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/16 15:39:55 by ggaetani          #+#    #+#             */
+/*   Updated: 2026/01/16 15:39:58 by ggaetani         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 /*
 The malloc(), calloc(), valloc(), realloc(), and reallocf() functions
@@ -15,10 +25,10 @@ zero.
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void *arr;
+	void	*arr;
 
-	if (count != 0 && SIZE_MAX / count < size)
-		return(NULL);
+	if (count != 0 && size != 0 && count > (size_t)-1 / size)
+		return (NULL);
 	arr = malloc(count * size);
 	if (!arr)
 		return (NULL);

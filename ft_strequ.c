@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ggaetani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/16 15:27:53 by ggaetani          #+#    #+#             */
+/*   Updated: 2026/01/16 15:27:54 by ggaetani         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 // 42 header
 
 #include <stdlib.h>
@@ -13,7 +25,7 @@ Param. #2		The second string to be compared.
 Return value	1 or 0 according to if the 2 strings are identical or not.
 */
 
-int ft_strequ(char const *s1, char const *s2)
+int	t_strequ(char const *s1, char const *s2)
 {
 	size_t	i;
 
@@ -23,7 +35,7 @@ int ft_strequ(char const *s1, char const *s2)
 			return (1);
 		else
 			return (0);
-	while((s1[i] == s2[i]) && s1[i] != '\0')
+	while ((s1[i] == s2[i]) && s1[i] != '\0')
 	{
 		i++;
 	}

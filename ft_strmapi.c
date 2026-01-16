@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ggaetani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/16 15:26:57 by ggaetani          #+#    #+#             */
+/*   Updated: 2026/01/16 15:26:58 by ggaetani         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 // 42 header
 
 #include <stdlib.h>
@@ -15,7 +27,7 @@ Param. #2		The function to apply to each character of s and its index.
 Return value	The “fresh” string created from the successive applications off.
 */
 
-char * ft_strmapi(char const *s, char(*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
 	char			*str;
@@ -28,8 +40,8 @@ char * ft_strmapi(char const *s, char(*f)(unsigned int, char))
 	i = 0;
 	while (s[i] != '\0')
 	{
-			str[i] = f(i, s[i]);
-			i++;
+		str[i] = f(i, s[i]);
+		i++;
 	}
 	str[i] = '\0';
 	return (str);

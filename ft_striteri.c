@@ -1,4 +1,14 @@
-// 42 header
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ggaetani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/16 15:27:24 by ggaetani          #+#    #+#             */
+/*   Updated: 2026/01/16 15:27:26 by ggaetani         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
@@ -14,7 +24,7 @@ Param. #2:		The function to apply to each character of s and its index.
 Return value:	None.
 */
 
-void ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
 
@@ -23,36 +33,36 @@ void ft_striteri(char *s, void (*f)(unsigned int, char *))
 	i = 0;
 	while (s[i] != '\0')
 	{
-			f(i, (char *)&s[i]);
-			i++;
+		f(i, (char *)&s[i]);
+		i++;
 	}
 }
 
 /*
 void    test(unsigned int i, char *c)
 {
-    if (i % 2 == 0)
-    {
-        if (*c >= 'a' && *c <= 'z')
-            *c = *c - 32;
-    }
-    else
-    {
-        if (*c >= 'A' && *c <= 'Z')
-            *c = *c + 32;
-    }
+	if (i % 2 == 0)
+	{
+		if (*c >= 'a' && *c <= 'z')
+			*c = *c - 32;
+	}
+	else
+	{
+		if (*c >= 'A' && *c <= 'Z')
+			*c = *c + 32;
+	}
 }
 
 int main(void)
 {
-    char str[] = "Hello World";
+	char str[] = "Hello World";
 
-    printf("Prima: %s\n", str);
+	printf("Prima: %s\n", str);
 
-    ft_striteri(str, test);
+	ft_striteri(str, test);
 
-    printf("Dopo : %s\n", str);
+	printf("Dopo : %s\n", str);
 
-    return (0);
+	return (0);
 }
 */

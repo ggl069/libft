@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ggaetani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/16 15:26:23 by ggaetani          #+#    #+#             */
+/*   Updated: 2026/01/16 15:26:25 by ggaetani         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 //Header 42
 
 /*
@@ -27,7 +39,7 @@ unsigned characters, so that ‘\200’ is greater than ‘\0’.
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (s1[i] == s2[i] && s1[i] != '\0' && i < n - 1)
@@ -41,7 +53,7 @@ int	main(void)
 {
 	char str1[] = "Hello";
 	char str2[] = "HelloWorld";
-	
+
 	printf("result: %d\n", ft_strncmp(str1, str2, 6));
 }
 */

@@ -1,4 +1,14 @@
-// 42 header
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ggaetani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/16 15:23:22 by ggaetani          #+#    #+#             */
+/*   Updated: 2026/01/16 15:23:26 by ggaetani         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
@@ -18,14 +28,12 @@ Return value    The “fresh” trimmed string or a copy of s.
 
 int	skip(char c)
 {
-	if (c == ' '	||
-		c == '\n'	||
-		c == '\t')
+	if (c == ' ' || c == '\n' || c == '\t')
 	{
 		return (1);
 	}
-	return(0);
-	}
+	return (0);
+}
 
 char	*ft_strtrim(char const *s)
 {
@@ -34,25 +42,26 @@ char	*ft_strtrim(char const *s)
 	size_t	len;
 	char	*str;
 
-	//str = malloc(sizeof(char) * );
 	j = 0;
 	i = 0;
 	len = ft_strlen(s);
 	if (!s)
 		return (NULL);
-	while(skip(s[i]))
+	while (skip(s[i]))
 		i++;
 	if (s[i] == '\0')
 	{
 		str = malloc(sizeof(char) * 1);
-		if (!str) return (NULL);
+		if (!str)
+			return (NULL);
 		str[0] = '\0';
-		return(str);
+		return (str);
 	}
 	while (skip(s[len - 1]))
 		len--;
 	str = malloc(sizeof(char) * (len - i + 1));
-	if (!str) return (NULL);
+	if (!str)
+		return (NULL);
 	while (i < len)
 	{
 		str[j] = s[i];

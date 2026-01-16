@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ggaetani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/16 16:06:37 by ggaetani          #+#    #+#             */
+/*   Updated: 2026/01/16 16:06:39 by ggaetani         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
@@ -9,9 +20,9 @@ Param. #1       The string to output.
 
 Return value    None.
 */
-void ft_putstr(char const *s)
+void	ft_putstr(char const *s)
 {
-	size_t  i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')

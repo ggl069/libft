@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ggaetani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/16 16:02:10 by ggaetani          #+#    #+#             */
+/*   Updated: 2026/01/16 16:02:16 by ggaetani         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
@@ -10,9 +21,9 @@ Param. #2       The file descriptor.
 
 Return value    None.
 */
-void ft_putstr_fd(char const *s, int fd)
+void	ft_putstr_fd(char const *s, int fd)
 {
-	size_t  i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')

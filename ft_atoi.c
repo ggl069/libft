@@ -1,10 +1,20 @@
-// header 42
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ggaetani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/16 15:34:22 by ggaetani          #+#    #+#             */
+/*   Updated: 2026/01/16 15:34:24 by ggaetani         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 /*
 DESCRIPTION
 	The atoi function converts the initial portion of the string to an integer.
 	It skips leading white-space characters and then processes an optional sign.
-	It converts the following digits into a numerical value 
+	It converts the following digits into a numerical value
 	until it reaches a non-digit character.
 RETURN VALUE
 	This function returns an integral number,

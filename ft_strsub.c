@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ggaetani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/16 15:23:40 by ggaetani          #+#    #+#             */
+/*   Updated: 2026/01/16 15:23:48 by ggaetani         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 // 42 header
 
 #include <stdlib.h>
@@ -12,7 +24,7 @@ Description 	Allocates (with malloc(3)) and returns a “fresh” substring
 
 Param. #1 		The string from which create the substring.
 Param. #2 		The start index of the substring.
-Param. #3 		The size of the substring. 
+Param. #3 		The size of the substring.
 
 Return value 	The substring.
 */
@@ -33,7 +45,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 		i++;
 	}
 	sub_str[i - start] = '\0';
-	return (sub_str);	
+	return (sub_str);
 }
 
 /*
@@ -49,7 +61,7 @@ int main(void)
     res = ft_strsub(s, 4, 100);
     printf("Test 2: [%s]\n", res);
     free(res);
-    
+
     return (0);
 }
 */

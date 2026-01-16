@@ -1,4 +1,14 @@
-// 42 header
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ggaetani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/16 15:54:00 by ggaetani          #+#    #+#             */
+/*   Updated: 2026/01/16 15:54:01 by ggaetani         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -17,7 +27,7 @@ void	ft_memdel(void **ap)
 		*ap = NULL;
 	}
 }
-
+/*
 int	main(void)
 {
 	char	*str = malloc(sizeof(char) * 12);
@@ -25,3 +35,4 @@ int	main(void)
 	ft_memdel((void **)&str);
 	return (0);
 }
+*/

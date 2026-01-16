@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ggaetani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/16 15:28:10 by ggaetani          #+#    #+#             */
+/*   Updated: 2026/01/16 15:28:15 by ggaetani         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 //42 header
 
 #include <stdlib.h>
@@ -14,8 +26,8 @@ ENOMEM.
 */
 char	*ft_strdup(const char *s1)
 {
-	size_t len;
-	char *arr;
+	size_t	len;
+	char	*arr;
 
 	len = ft_strlen(s1);
 	arr = malloc(sizeof(char) * (len + 1));
@@ -37,7 +49,7 @@ int	main(void)
 	//TEST 1: Stringa normale
 	printf("Test 1: Stringa normale\n");
 	printf("Originale: '%s' (Indirizzo: %p)\n", original, original);
-	
+
 	copy = ft_strdup(original);
 	if (!copy)
 	{
@@ -71,7 +83,7 @@ int	main(void)
 		return (1);
 	}
 	printf("Copia: '%s'\n", empty_copy);
-	
+
 	if (strcmp("", empty_copy) == 0)
 		printf("-> Contenuto: OK ✅\n");
 	else

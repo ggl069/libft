@@ -1,4 +1,14 @@
-//header 42
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ggaetani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/16 15:51:38 by ggaetani          #+#    #+#             */
+/*   Updated: 2026/01/16 15:51:41 by ggaetani         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 /*
 DESCRIPTION
@@ -17,19 +27,19 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*str;
 	unsigned char	chr;
-	size_t	i;
+	size_t			i;
 
 	chr = (unsigned char)c;
 	str = (unsigned char *)s;
 	i = 0;
-	while(i < n)
+	while (i < n)
 	{
 		if (str[i] == chr)
 			return ((void *)&str[i]);
 		i++;
 	}
 	return (0);
-} 
+}
 /*
 int	main(void)
 {

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ggaetani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/16 15:24:46 by ggaetani          #+#    #+#             */
+/*   Updated: 2026/01/16 15:24:48 by ggaetani         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 //Header 42
 
 /*
@@ -16,8 +28,11 @@ character of the first occurrence of needle is returned.
 #include <stdio.h>
 #include "libft.h"
 
-/*The functions uses a attention function named "att" that is incremented when the haystack cell fit's with needle first cell, if this condition still true for the entire needle len the index cell index is calculed and returned*/
-char *ft_strnstr(const char *haystack, const char *needle, size_t len)
+/*The functions uses a attention function named "att"
+ that is incremented when the haystack cell fit's with needle
+ first cell, if this condition still true for the entire needle len
+  the index cell index is calculed and returned*/
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
 	size_t	j;
@@ -44,13 +59,12 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 				j++;
 			}
 			if (att == ndlen)
-				break;
-
+				break ;
 		}
 		i++;
 	}
 	if (att == ndlen)
-		return((char *)&haystack[i]);
+		return ((char *)&haystack[i]);
 	else
 		return (0);
 }
