@@ -1,10 +1,14 @@
-You must submit a Makefile which will compile your source files to a static library
-libft.a.
-
-• Your Makefile must at least contain the rules $(NAME), all, clean, fclean et re
-in the order that you will see fit.
-
-• Your Makefile must compile your work with the flags -Wall, -Wextra and -Werror.
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ggaetani <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2026/01/20 16:06:18 by ggaetani          #+#    #+#              #
+#    Updated: 2026/01/20 16:06:20 by ggaetani         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
 NAME = libft.a
 
@@ -12,7 +16,7 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRC =
+SRC = \
 	ft_bzero.c \
 	ft_isalnum.c \
 	ft_isalpha.c \
