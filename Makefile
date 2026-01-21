@@ -52,12 +52,7 @@ ft_calloc.c \
 ft_substr.c \
 ft_split.c \
 
-
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
 OBJ = $(SRC:.c=.o)
-
 
 all: $(NAME)
 
