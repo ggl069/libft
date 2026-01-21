@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
 /*
 Description     Outputs the integer n to the file descriptor fd.

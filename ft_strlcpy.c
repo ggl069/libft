@@ -33,6 +33,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	i;
 	size_t	len;
 
+	len = 0;
 	if (size == 0)
 		return (len);
 	i = 0;
@@ -50,19 +51,10 @@ int	main(void)
 	char	str[] = "ciao";
 	char	dst_str[9];
 
-	//ft_bzero(dst_str, 8);
+
 	printf("before: %s\n", dst_str);
 	printf("%zu\n", ft_strlcpy(dst_str, str, 0));
-	//printf("%d\n", strlcpy(dst_str, str, 5));
+
 	printf("after: %s\n", dst_str);
 }
-/*
-	//stability after moulinette
-	if (!dst || !src)
-		{
-		if (src)
-			return (ft_strlen(src));
-		else
-			return (0);
-		}
 */

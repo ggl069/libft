@@ -12,6 +12,7 @@
 
 #include <stdio.h>
 #include <unistd.h>
+#include "libft.h"
 
 /*
 Description     Outputs the integer n to the standard output.

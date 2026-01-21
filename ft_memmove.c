@@ -29,7 +29,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	size_t			i;
 
 	d = (unsigned char *)dest;
-	s = (const unsigned char *)src;
+	s = (unsigned char *)src;
 	i = 0;
 	if (!d || !s)
 		return (0);
@@ -49,13 +49,38 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
 /*
+void print_test(char *title, char *data, size_t len)
+{
+    printf("--- %s ---\n", title);
+    printf("Risultato: %s\n\n", data);
+}
+
 int main(void)
 {
-	char str[5] = "ciao";
-	char str1[6];
+    // Caso 1: Nessuna sovrapposizione
+    char src1[] = "Hello World";
+    char dest1[20];
+    ft_memmove(dest1, src1, 12);
+    print_test("Test 1: Semplice Copia", dest1, 12);
 
-	ft_memmove(str1, str, 5);
-	//return (0);
+    // Caso 2: Overlap (Dest > Src)
+    // Partiamo da: "ABCDE"
+    // Vogliamo spostare "ABC" in avanti di due posizioni: "ABABC"
+    char buffer2[] = "ABCDE";
+    printf("Buffer prima (Overlap D > S): %s\n", buffer2);
+    ft_memmove(buffer2 + 2, buffer2, 3);
+    print_test("Test 2: Overlap (Dest > Src)", buffer2, 5);
+
+    // Caso 3: Overlap (Dest < Src)
+    // Partiamo da: "ABCDE"
+    // Vogliamo spostare "CDE" all'inizio: "CDE DE" (o meglio "CDEDE")
+    char buffer3[] = "ABCDE";
+    printf("Buffer prima (Overlap D < S): %s\n", buffer3);
+    ft_memmove(buffer3, buffer3 + 2, 3);
+    print_test("Test 3: Overlap (Dest < Src)", buffer3, 5);
+
+    return (0);
 }
 */
