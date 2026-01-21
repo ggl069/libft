@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_split.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ggaetani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -61,7 +61,7 @@ static char	**ft_fill_tab(char **tab, char const *s, char c)
 			start = i;
 			while (s[i] != '\0' && s[i] != c)
 				i++;
-			tab[j] = ft_strsub(s, start, i - start);
+			tab[j] = ft_substr(s, start, i - start);
 			if (tab[j] == NULL)
 				return ((char **)ft_free_tab(tab, j));
 			j++;
@@ -76,7 +76,7 @@ Description		Allocates (with malloc(3)) and returns an array of “fresh”
 				strings (all ending with ’\0’, including the array itself) ob-
 				tained by spliting s using the character c as a delimiter.
 				If the allocation fails the function returns NULL. Example
-				: ft_strsplit("*hello*fellow***students*", ’*’) re-
+				: ft_split("*hello*fellow***students*", ’*’) re-
 				turns the array ["hello", "fellow", "students"].
 
 Param. #1		The string to split.
@@ -84,7 +84,7 @@ Param. #2		The delimiter character.
 
 Return value	The array of “fresh” strings result of the split.
 */
-char	**ft_strsplit(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**tab;
 
@@ -98,5 +98,5 @@ char	**ft_strsplit(char const *s, char c)
 
 int main(void)
 {
-	ft_strsplit("*hello*fellow***students*", '*');
+	ft_split("*hello*fellow***students*", '*');
 }
