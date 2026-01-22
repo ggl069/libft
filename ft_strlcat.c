@@ -21,41 +21,25 @@ for the easily misused functions strncpy(3) and strncat(3).
 */
 
 /*modified version of ft_strlen that stop counting if i >= size*/
-static size_t	sized_strlen(const char *str, size_t size)
-{
-	size_t	i;
-
-	i = 0;
-	if (!str)
-		return (0);
-	while (str[i] != '\0' && i < size)
-	{
-		i++;
-	}
-	return (i);
-}
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-	size_t	j;
-	size_t	len;
+	size_t	dst_len;
+	size_t	src_len;
 
-	i = sized_strlen(dst, size);
-	j = 0;
-	len = i + ft_strlen(src);
-	if (i >= size || size <= 0)
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
+	if (size <= dst_len)
+		return (size + src_len);
+	i = 0;
+	while (src[i] != '\0' && i < size - dst_len - 1)
 	{
-		return (len);
-	}
-	while (src[j] != '\0' && i != size - 1 && i < size)
-	{
-		dst[i] = src[j];
+		dst[dst_len + i] = src[i];
 		i++;
-		j++;
 	}
-	dst[i] = '\0';
-	return (len);
+	dst[dst_len + i] = '\0';
+	return (dst_len + src_len);
 }
 /*
 int main(void)

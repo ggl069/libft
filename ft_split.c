@@ -89,14 +89,15 @@ char	**ft_split(char const *s, char c)
 	char	**tab;
 
 	if (!s)
-	return (NULL);
+		return (NULL);
 	tab = (char **)malloc(sizeof(char *) * (ft_word_count(s, c) + 1));
 	if (!tab)
-	return (NULL);
-		return (ft_fill_tab(tab, s, c));
+		return (NULL);
+	return (ft_fill_tab(tab, s, c));
 }
-
+/*
 int main(void)
 {
 	ft_split("*hello*fellow***students*", '*');
 }
+*/

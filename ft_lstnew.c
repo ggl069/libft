@@ -12,6 +12,7 @@
 
 #include "libft.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /*
 Allocates memory (using malloc(3)) and returns
@@ -23,7 +24,7 @@ content: The content to store in the new node.
 
 return: A pointer to the new node
 */
-t_list *ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content)
 {
 	t_list	*node;
 
@@ -34,4 +35,9 @@ t_list *ft_lstnew(void *content)
 	node->next = NULL;
 	return (node);
 }
-
+/*
+int main(void)
+{
+	printf("%s\n", (char *)("ciao"));
+}
+*/

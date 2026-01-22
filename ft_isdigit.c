@@ -16,13 +16,5 @@ int	ft_isdigit(int c)
 	{
 		return (1);
 	}
-	else if (c >= 'a' && c <= 'f')
-	{
-		return (1);
-	}
-	else if (c >= 'A' && c <= 'F')
-	{
-		return (1);
-	}
 	return (0);
 }

@@ -33,7 +33,7 @@ char	*ft_strdup(const char *s1)
 	arr = malloc(sizeof(char) * (len + 1));
 	if (!arr)
 		return (NULL);
-	ft_memcpy(arr, s1, len);
+	ft_memcpy(arr, s1, len + 1);
 	return (arr);
 }
 

@@ -26,7 +26,7 @@ Param. #1       The string to be trimed.
 Return value    The “fresh” trimmed string or a copy of s.
 */
 
-static int	skip(char c,  char const *set)
+static int	skip(char c, char const *set)
 {
 	size_t	i;
 	int		bool;
@@ -45,7 +45,7 @@ static int	skip(char c,  char const *set)
 	return (bool);
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	len;

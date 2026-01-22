@@ -31,19 +31,17 @@ for the easily misused functions strncpy(3) and strncat(3).
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-	size_t	len;
 
-	len = 0;
 	if (size == 0)
-		return (len);
+		return (ft_strlen(src));
 	i = 0;
-	while (src[i] != '\0' && i != size - 1)
+	while (src[i] != '\0' && i < size - 1)
 	{
 		dst[i] = src[i];
 		i++;
 	}
 	dst[i] = '\0';
-	return (len);
+	return (ft_strlen(src));
 }
 /*
 int	main(void)

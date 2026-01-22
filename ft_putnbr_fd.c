@@ -23,21 +23,22 @@ Return value    None.
 */
 void	ft_putnbr_fd(int n, int fd)
 {
+	long	num;
+
+	num = n;
 	if (n == -2147483648)
 	{
 		write(fd, "-2147483648", 11);
+		return ;
 	}
-	else
+	if (num < 0)
 	{
-		if (n < 0)
-		{
-			ft_putchar_fd(fd, '-');
-			n = -n;
-		}
-		if (n > 9)
-		{
-			ft_putnbr_fd(fd, n / 10);
-		}
-		ft_putchar_fd(fd, (n % 10) + '0');
+		ft_putchar_fd('-', fd);
+		num = -num;
 	}
+	if (num >= 10)
+	{
+		ft_putnbr_fd(num / 10, fd);
+	}
+	ft_putchar_fd((num % 10) + '0', fd);
 }

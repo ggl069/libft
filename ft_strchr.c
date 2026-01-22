@@ -38,16 +38,15 @@ does not appear in the string.
 
 char	*ft_strchr(const char *s, int c)
 {
-	const char	*str;
-	int			i;
-
-	i = 0;
-	str = (char *)s;
-	while (s[i] != '\0' || s[i] == '\0')
+	if (!s)
+		return (NULL);
+	if (c == '\0')
+		return ((char *)(s + ft_strlen(s)));
+	while (*s)
 	{
-		if (str[i] == c)
-			return ((char *)&str[i]);
-		i++;
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
 	}
 	return (NULL);
 }

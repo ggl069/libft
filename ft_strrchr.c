@@ -42,11 +42,13 @@ char	*ft_strrchr(const char *s, int c)
 	const char	*str;
 	int			i;
 
+	if (!s)
+		return (NULL);
 	i = ft_strlen(s);
 	str = (char *)s;
 	while (i >= 0)
 	{
-		if (str[i] == c)
+		if (str[i] == (char)c)
 			return ((char *)&str[i]);
 		i--;
 	}

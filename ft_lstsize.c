@@ -1,18 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ggaetani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/26 15:19:24 by ggaetani          #+#    #+#             */
-/*   Updated: 2025/11/26 15:19:26 by ggaetani         ###   ########.fr       */
+/*   Created: 2026/01/22 19:43:25 by ggaetani          #+#    #+#             */
+/*   Updated: 2026/01/22 19:43:27 by ggaetani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+#include "libft.h"
+#include <stddef.h>
+
+/*
+Counts the number of nodes in the list.
+
+lst: The beginning of the list.
+
+Return: The length of the list
+*/
+int	ft_lstsize(t_list *lst)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	return (0);
+	int		cnt;
+
+	if (!lst)
+		return (0);
+	cnt = 0;
+	while (lst != NULL)
+	{
+		lst = lst->next;
+		cnt++;
+	}
+	return (cnt);
 }

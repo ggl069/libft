@@ -30,22 +30,28 @@ Return value 	The substring.
 */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
+	char	*substr;
 	size_t	i;
-	char	*sub_str;
+	size_t	s_len;
 
-	if (!s || start > ft_strlen(s))
+	if (!s)
 		return (NULL);
-	sub_str = malloc(sizeof(char) * (len + 1));
-	if (!sub_str)
+	s_len = ft_strlen(s);
+	if (start >= s_len)
+		return (ft_calloc(1, 1));
+	if (len > s_len - start)
+		len = s_len - start;
+	substr = (char *)malloc((len + 1) * sizeof(char));
+	if (!substr)
 		return (NULL);
-	i = start;
-	while (s[i] != '\0' && i < len + start)
+	i = 0;
+	while (s[start + i] != '\0' && i < len)
 	{
-		sub_str[i - start] = s[i];
+		substr[i] = s[start + i];
 		i++;
 	}
-	sub_str[i - start] = '\0';
-	return (sub_str);
+	substr[i] = '\0';
+	return (substr);
 }
 
 /*
