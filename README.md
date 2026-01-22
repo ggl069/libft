@@ -20,3 +20,6 @@ To compile the library, you can use the provided `Makefile`.
    ```bash
    git clone <repository_url>
    cd libft
+
+## Role of AI
+Artificial Intelligence tools were utilized strictly as a documentation resource and "smart search engine," comparable to using Stack Overflow.
