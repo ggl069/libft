@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 static int	ft_len(long n)
 {
@@ -58,4 +60,16 @@ char	*ft_itoa(int n)
 		i--;
 	}
 	return (str);
+}
+
+int main()
+{
+	int number = -12345;
+	char *str = ft_itoa(number);
+	if (str)
+	{
+		printf("The string representation of %d is: %s\n", number, str);
+		free(str);
+	}
+	return 0;
 }

@@ -95,9 +95,9 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (ft_fill_tab(tab, s, c));
 }
-/*
+
 int main(void)
 {
 	ft_split("*hello*fellow***students*", '*');
 }
-*/
+
