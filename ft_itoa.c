@@ -61,7 +61,7 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-
+/*
 int main()
 {
 	int number = -12345;
@@ -73,3 +73,4 @@ int main()
 	}
 	return 0;
 }
+*/
