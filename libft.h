@@ -61,6 +61,7 @@ void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 	/*--custom--*/
 void	ft_strflip(char *str);
+char	*ft_uitoa(unsigned int	n);
 
 /*-- list --*/
 t_list	*ft_lstnew(void *content);
