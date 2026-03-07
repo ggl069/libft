@@ -33,7 +33,7 @@ char	*ft_uitoa(unsigned int	n)
 	char	*str;
 	int		i;
 
-	i = ft_len(n);
+	i = ft_ulen(n);
 	str = (char *)malloc(sizeof(char) * (i + 1));
 	if (!str)
 		return (NULL);
